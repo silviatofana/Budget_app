@@ -2,12 +2,14 @@
 
 <h1>Groups</h1>
 
+
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
+    <%= image_tag(group.icon, size: '96x96') %>
     <p>
     <%= group.name %>  
-    <%= group.icon %>
+ 
     <%= link_to "Show this group", group %>
       
     </p>
