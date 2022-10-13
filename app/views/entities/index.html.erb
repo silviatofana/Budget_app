@@ -1,0 +1,22 @@
+<div class="d-grid justify-content-center">
+  <h3>Entity</h3>
+  <%= link_to 'Create', new_entity_path, class: 'btn btn-primary btn-sm' %>
+  <br>
+  
+</div>
+<% @entities.each do |entity| %>
+<div class="container d-flex justify-content-center">
+  <div class="card mb-2" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div>
+        <div class="card-body">
+          <h5 class="card-title"> <%= entity.name %></h5>
+          <p class="card-text"> <%= entity.amount %></p>
+          <p class="card-text"><small class="text-muted">Created at <%= entity.created_at %>></small></p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
