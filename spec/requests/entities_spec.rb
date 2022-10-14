@@ -4,7 +4,7 @@ RSpec.describe 'Entities', type: :request do
   include Devise::Test::IntegrationHelpers
   before do
     @user = User.create(name: 'Dan Go', password: '123456', email: 'dan@gmail.com')
-    @budget =Entity.create(name: 'Toyota', amount: 100)
+    Entity.create(name: 'Toyota', amount: 100)
     sign_in @user
   end
 
