@@ -11,7 +11,6 @@
 ## Video link
 - [Video link]()
 ## ERD
-![image](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd.png)
 
 ### Cloning the project
 
