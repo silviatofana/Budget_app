@@ -17,7 +17,7 @@ RSpec.describe Entity, type: :model do
   #   end
   # end
 
-  #test validations.
+  # test validations.
   describe 'validations' do
     # it 'is valid with valid attributes' do
     #   expect(Entity.new(name: 'Rent', amount: 1000)).to be_valid
@@ -28,14 +28,13 @@ RSpec.describe Entity, type: :model do
     it 'is not valid without an amount' do
       expect(Entity.new(name: 'Rent')).to_not be_valid
     end
-      # test associations.
+    # test associations.
     describe 'associations' do
-      it "belongs to a user" do
-       assc= described_class.reflect_on_association(:user)
+      it 'belongs to a user' do
+        assc = described_class.reflect_on_association(:user)
         expect(assc.macro).to eq :belongs_to
       end
     end
-
   end
   # after(:all) do
   #   @user.destroy

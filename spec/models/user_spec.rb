@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   subject do
     user = User.create(name: 'Solo Boss', password: '123456', email: 'soloboss@gmail.com')
-   
   end
 
   before { subject.save }
