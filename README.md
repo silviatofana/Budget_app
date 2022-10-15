@@ -6,11 +6,8 @@
 
 ## Link 
 ``
-
+This is the link to the website:[BUDGET APP](https://evening-island-47181.herokuapp.com/)
 ``
-## Video link
-- [Video link]()
-## ERD
 
 ### Cloning the project
 
