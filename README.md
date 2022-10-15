@@ -1,14 +1,16 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Rails Banking App
+image.png
 
 >Rails Capstone App app is a Ruby on Rails application that keeps track of all your entity and group.
 
 ## Link 
+https://www.loom.com/share/88fab7327a264e2a8525db1e0871020e
 
 https://user-images.githubusercontent.com/9010615/189194693-77468f8c-1a80-44fe-a74a-e301808b1f2d.png
 
-
+https://dashboard.heroku.com/apps/bankcapstone/deploy/github
 
 
 ### Cloning the project
