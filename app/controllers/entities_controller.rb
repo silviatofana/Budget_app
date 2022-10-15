@@ -10,6 +10,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
+  
     @entity = Entity.new
     @categories = Group.where(user_id: current_user.id)
   end
@@ -22,11 +23,11 @@ class EntitiesController < ApplicationController
     params = entity_params
     @entity = Entity.new(name: params[:name], amount: params[:amount])
     @entity.user = User.first
+  
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to groups_url, notice: 'Transaction was successfully created.' }
-        format.json { render :show, status: :created, location: @entity }
+        format.html { redirect_to groups_url(@groups, @entity), notice: 'Transaction was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @entity.errors, status: :unprocessable_entity }
@@ -34,18 +35,7 @@ class EntitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /entities/1 or /entities/1.json
-  def update
-    respond_to do |format|
-      if @entity.update(entity_params)
-        format.html { redirect_to entity_url(@entity), notice: 'Transaction was successfully updated.' }
-        format.json { render :show, status: :ok, location: @entity }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @entity.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+ 
 
   # DELETE /entities/1 or /entities/1.json
   def destroy
