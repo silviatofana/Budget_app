@@ -5,9 +5,9 @@
 >Rails Capstone App app is a Ruby on Rails application that keeps track of all your entity and group.
 
 ## Link 
-``
+
 This is the link to the website:[BUDGET APP](https://evening-island-47181.herokuapp.com/)
-``
+
 
 ### Cloning the project
 
