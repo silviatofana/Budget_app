@@ -5,6 +5,7 @@
 >Rails Capstone App app is a Ruby on Rails application that keeps track of all your entity and group.
 
 ## Link 
+https://user-images.githubusercontent.com/9010615/189194693-77468f8c-1a80-44fe-a74a-e301808b1f2d.png
 ``
 
 ``

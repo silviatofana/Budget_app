@@ -2,7 +2,8 @@
 
 
 <div>
- 
+  <h1>Group Transactions</h1> 
+  <%= link_to 'New Entity', new_entity_path(@group), class: 'btn btn-primary btn-sm' %>
   <%= link_to "Back to groups", groups_path %>
 
   <%= button_to "Destroy this group", @group, method: :delete %>

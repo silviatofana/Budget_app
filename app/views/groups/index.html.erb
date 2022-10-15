@@ -9,32 +9,22 @@
 </div>
 <% @groups.each do |g| %>
   <div class="container d-flex justify-content-center">
-    <div class="card mb-2" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <%= image_tag(g.icon, size: '96x96') %>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <%= link_to group_entity_index_path(g.id) do %>
-            <h5 class="card-title"> <%= g.name %></h5>
-            <% end %>
-            <% sum = 0 %>
-            <% @entity.each do |e| %>
-              <h5 class="card-title">
-
-                <% sum += e.amount %>
-                  <% end %>
-                <%= sum %>
-              </h5>
-
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <% if can? :destroy, g %>
-            <%= button_to 'Delete' ,g,method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'  %>
-            <% end %>
-          </div>
-        </div>
+    <div class="container card d-flex justify-content-between">
+    <div class='row'>
+      
+      <div class='col-md-4'>
+        <img src="<%= g.icon %>" alt="Group Icon" width="50" height="50">
       </div>
+      <div class='col-md-4 card-title'>
+        <h3><%= g.name %></h3>
+        <span class="badge bg-primary"> <%= g.created_at.strftime("%B, %e at %H:%M") %> </span>
+        <span class="align-self-start"> <%= g.entities.sum(&:amount) %> </span>
+        </div>
+    </div>
+    <div class='col-md-4'>
+    <%= link_to 'View Transaction', group_path(g), class: 'btn btn-sm btn-primary btn-sm' %>
+    </div>
+
     </div>
   </div>
 <% end %>
