@@ -10,7 +10,6 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
-  
     @entity = Entity.new
     @categories = Group.where(user_id: current_user.id)
   end
@@ -20,10 +19,8 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    params = entity_params
-    @entity = Entity.new(name: params[:name], amount: params[:amount])
+    @entity = Entity.new(entity_params)
     @entity.user = User.first
-  
 
     respond_to do |format|
       if @entity.save
@@ -34,8 +31,6 @@ class EntitiesController < ApplicationController
       end
     end
   end
-
- 
 
   # DELETE /entities/1 or /entities/1.json
   def destroy
@@ -55,6 +50,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:name, :amount, :group_id)
+    params.require(:entity).permit(:name, :amount)
   end
 end

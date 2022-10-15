@@ -1,22 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
-  # before(:all) do
-  #   @user = User.create!(name: 'John', email: 'john@gmail.com', password: '123456')
-  #   @expense = @user.entities.create(name: 'Rent', amount: 1000)
-  # end
-
-  # context 'valid attributes' do
-  #   it 'is valid with valid attributes' do
-  #     subject.name = 'Employee'
-  #     expect(subject).to be_valid
-  #   end
-  #   it 'is not valid without a name' do
-  #     subject.amount = -1
-  #     expect(subject).to_not be_valid
-  #   end
-  # end
-
+  
   # test validations.
   describe 'validations' do
     # it 'is valid with valid attributes' do
@@ -36,7 +21,4 @@ RSpec.describe Entity, type: :model do
       end
     end
   end
-  # after(:all) do
-  #   @user.destroy
-  # end
 end

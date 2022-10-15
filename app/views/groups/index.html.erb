@@ -14,16 +14,17 @@
       <div class='col-md-4'>
         <img src="<%= g.icon %>" alt="Group Icon" width="50" height="50">
       </div>
+    
       <div class='col-md-4 card-title'>
         <h3><%= g.name %></h3>
         <span class="badge bg-primary"> <%= g.created_at.strftime("%B, %e at %H:%M") %> </span>
-        <span class="align-self-start"> <%= g.entities.sum(&:amount) %> </span>
+        
         </div>
     </div>
     <div class='col-md-4'>
     <%= link_to 'View Transaction', group_path(g), class: 'btn btn-sm btn-primary btn-sm' %>
     </div>
 
-    </div>
+      </div>
   </div>
 <% end %>
